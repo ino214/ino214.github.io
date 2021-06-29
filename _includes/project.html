@@ -1,0 +1,49 @@
+<section class="section-content project">
+    <div class="container">
+        <h1>PROJECT</h1>
+        <div class="project-cont">
+            <div class="project-list">
+                <div class="project-item">
+                    <img class="project-img port-img" src="/assets/img/project/portfolio-img.png" alt="웹 포트폴리오">
+                    <div class="project-item-cont port-cont">
+                        <h3>이인호 웹 포트폴리오</h3>
+                        <p>포트폴리오 제작을 위해 적응형 웹으로 설계한 웹 포트폴리오 프로젝트 입니다.</p>
+                        <div>
+                            <ul>
+                                <li><strong>기여도</strong></li>
+                                <li><strong>개발 환경</strong></li>
+                            </ul>
+                            <ul class="project-item-ul-cont">
+                                <li><span>100%</span></li>
+                                <li><span>Visual Studio Code, GitHub, Ruby, Jekyll, HTML, JS, CSS, SpringBoot, JQuery, FontAwesome</span></li>
+                            </ul>
+                        </div>
+                        <a href="https://github.com/ino214/ino214.github.io"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img class="project-img mov-img" src="/assets/img/project/movieTicketingSite-img.jpg" alt="영화예매사이트">
+                    <div class="project-item-cont mov-cont">
+                        <h3>영화 예매 사이트</h3>
+                        <p>2인 팀프로젝트로 제작한 영화 예매 사이트 입니다.</p>
+                        <div>
+                            <ul>
+                                <li><strong>기여도</strong></li>
+                                <li><strong>개발 환경</strong></li>
+                            </ul>
+                            <ul class="project-item-ul-cont">
+                                <li><span>영화 목록 출력, 영화 정보, 관람평, 예매와 좌석선택, 결제 기능</span></li>
+                                <li><span>Eclipse IDE, JAVA, JS, CSS, Apache Tomcat, OracleDB, Spring, MyBatis, Jquery, JSTL</span></li>
+                            </ul>
+                        </div>
+                        <a href="https://github.com/ino214/movieTicketingSite"><i class="fab fa-github fa-2x"></i></a>
+                        {% assign posts = site.posts %}
+                        {%- for post in posts -%}
+                        <a class="project-post" href="{{ post.url }}">{{ post.title }}</a>
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

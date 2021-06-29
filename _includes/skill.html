@@ -1,0 +1,19 @@
+<section class="section-content skills">
+    <div class="container">
+        <h1>SKILL</h1>
+        {% if site.data.skills -%}
+        <div class="skill-cont">
+            <ul class="skill-list">
+                {% for skills in site.data.skills -%}
+                    <li class="skill-item">
+                        <div class="skill-wrap">
+                        <img class="skill-img" src="{{ skills.url }}" alt="{{ skills.title }}">
+                        <span class="skill-text">{{ skills.title }}</span>
+                        </div>
+                    </li>
+                {%- endfor %}
+            </ul>
+        </div>
+        {%- endif %}
+    </div>
+</section>
