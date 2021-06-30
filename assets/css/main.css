@@ -275,20 +275,26 @@ nav a{
 
 /* project.html css */
 .project-list{
-    width: 800px;
-    margin: 0 170px;
+    width: 300px;
+    margin: 0 30px;
 }
 .project-item{
     position: relative;
-    width: 800px;
-    height: 300px;
+    width: 300px;
+    height: 520px;
     margin-bottom: 30px;
 }
 .project-img, .project-item-cont{
     position: absolute;
     display: block;
-    width: 400px;
-    height: 300px;
+}
+.project-img{
+    width: 300px;
+    height: 200px;
+}
+.project-item-cont{
+    width: 300px;
+    height: 320px;
 }
 .project-img{
     border-radius: 20px;
@@ -299,12 +305,12 @@ nav a{
     left: 0;
 }
 .port-cont{
-    top: 0;
+    top: 210px;
     right: 0;
     padding-left: 20px;
 }
 .mov-img{
-    bottom: 0;
+    bottom: 330px;
     right: 0;
 }
 .mov-cont{
@@ -314,7 +320,7 @@ nav a{
 }
 .project-item-cont h3{
     color: rgb(134, 101, 29);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .project-item-cont p{
     text-align: left;
@@ -324,7 +330,7 @@ nav a{
 .project-item-cont div{
     height: 110px;
     font-size: 15px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .project-item-cont div ul{
     display: block;
@@ -340,7 +346,7 @@ nav a{
     height: 36px;
     color: rgb(134, 101, 29);
     float: left;
-    margin-left: 20px;
+    margin-right: 10px;
 }
 .project-post{
     text-decoration: none;
@@ -355,7 +361,7 @@ nav a{
     background-color: rgb(168, 143, 96);
 }
 .project-item-ul-cont{
-    width: 300px;
+    width: 200px;
     padding-left: 10px;
 }
 
@@ -512,6 +518,58 @@ nav a{
         margin-top: 10px;
         margin-left: 10px;
     }
+    .project-list{
+        width: 600px;
+        margin: 0 60px;
+    }
+    .project-item{
+        width: 600px;
+        height: 500px;
+        margin-bottom: 30px;
+    }
+    .project-img{
+        width: 400px;
+        height: 300px;
+    }
+    .project-item-cont{
+        width: 600px;
+        height: 200px;
+    }
+    .project-img{
+        border-radius: 20px;
+        border: 3px solid rgb(134, 101, 29);
+    }
+    .port-img{
+        top: 0;
+        left: 100px;
+    }
+    .port-cont{
+        top: 310;
+        right: 0;
+    }
+    .mov-img{
+        bottom: 210;
+        right: 100;
+    }
+    .mov-cont{
+        bottom: 0;
+        left: 0;
+    }
+    .project-item-cont h3{
+        margin-bottom: 10px;
+    }
+    .project-item-cont p{
+        text-align: left;
+        font-size: 15;
+    }
+    .project-item-cont div{
+        height: 70px;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .project-item-ul-cont{
+        width: 500px;
+    }
 }
 @media(min-width: 990px){
     .container{
@@ -617,6 +675,62 @@ nav a{
         margin-top: 15px;
         margin-left: 15px;
     }
+    .project-list{
+        width: 800px;
+        margin: 0 80px;
+    }
+    .project-item{
+        width: 800px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    .project-img, .project-item-cont{
+        width: 400px;
+        height: 300px;
+    }
+    .project-img{
+        border-radius: 20px;
+        border: 3px solid rgb(134, 101, 29);
+    }
+    .port-img{
+        top: 0;
+        left: 0;
+    }
+    .port-cont{
+        top: 0;
+        right: 0;
+        padding-left: 20px;
+    }
+    .mov-img{
+        bottom: 0;
+        right: 0;
+    }
+    .mov-cont{
+        bottom: 0;
+        left: 0;
+        padding-right: 20px;
+    }
+    .project-item-cont h3{
+        margin-bottom: 30px;
+    }
+    .project-item-cont p{
+        text-align: left;
+        font-size: 18px;
+    }
+    .project-item-cont div{
+        height: 110px;
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    .project-item-cont a{
+        margin-left: 20px;
+    }
+    .project-item-ul-cont{
+        width: 300px;
+    }
+    .project-item-cont a{
+        clear: none;
+    }
 }
 @media(min-width: 1200px){
     .container{
@@ -665,5 +779,8 @@ nav a{
         float: left;
         width: 200px;
         height: 200px;
+    }
+    .project-list{
+        margin: 0 170px;
     }
 }
