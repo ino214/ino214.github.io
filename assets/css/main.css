@@ -396,34 +396,50 @@ nav a{
 .post-header{
     display: none;
 }
-.post-content p{
+.kram-title-p{
+    font-size: 13px;
+}
+.kram-cont{
+    padding: 40px 0;
+    padding-left: 10px;
     text-align: left;
+    word-break: keep-all;
 }
-.post-content table{
-    width: 600px;
-    margin: 30px 0;
-    margin-left: 250px;
-    padding: 20px 0;
+.kram-cont p{
+    margin: 0;
 }
-.post-content table thead{
-    font-size: 25px;
+.kram-cont p, .highlight{
+    margin-left: 10px;
 }
-.post-content h1, .post-content h2, .post-content h3,
- .post-content h4, .post-content h5{
-    margin: 40px 0;
+.kram-cont h1{
+    color: #94a4a5;
 }
-.post-content li{
-    text-align: left;
+.kram-cont h2{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: #94a4a5;
+    color: white;
 }
-.post-content h1, .post-content h2{
-    border-bottom: 1px solid rgb(201, 201, 201);
+.kram-cont h3{
+    display: block;
+    margin-top: 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+.kram-cont table{
+    margin-bottom: 20px;
+}
+.kram-cont thead th{
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+.kram-cont tbody td{
+    padding-left: 20px;
 }
 .highlight{
     background-color: #f8f8f8;
-}
-.language-ruby{
-    background-color: transparent !important;
-    text-align: left;
 }
 
 @media(min-width: 400px){

@@ -4,16 +4,17 @@ title: 영화 예매 사이트
 ---
 # movieTicketingSite
 
-**movieTicketingSite는 메가박스를 참고하여 만든 영화예매사이트 프로젝트입니다.**   
-Dynamic Web Module 3.1버전을 사용하였습니다.   
+> ***movieTicketingSite는 메가박스를 참고하여 만든 영화예매사이트 프로젝트입니다.**   
+> *Dynamic Web Module 3.1버전을 사용하였습니다.   
+{: .kram-title-p}
 
-## 개발환경
+## 1. 개발환경
 
 |**운영체제**|
 |:---|
 |windows 10|   
 
-|**IDE**|
+|**개발 툴**|
 |:---|
 |Eclipse 2021-03|   
 
@@ -38,7 +39,7 @@ Dynamic Web Module 3.1버전을 사용하였습니다.
 |JQuery|
 |JSTL|
 
-## 프로젝트 소개
+## 2. 프로젝트 소개
 
 교육기관에서 팀프로젝트를 진행해 만든 프로젝트 입니다.   
 최근에 피아니스트, 오만과 편견, 멀홀랜드 드라이브 등 옛날 영화에 관심이 가 주제를 영화와 관련된 영화예매사이트로 정하였습니다.   
@@ -49,51 +50,52 @@ Dynamic Web Module 3.1버전을 사용하였습니다.
 MovieController.java에서 데이터베이스에 있는 영화정보를 받아와 movieList.jsp에서 출력해 주었습니다.   
 (Controller -> Service -> DAO -> DB -> DAO -> Service -> Controller)   
 DB에 있는 모든 영화를 가져와 간단한 정보와 함께 출력해 주었습니다.   
-- movieList.jsp   
 ![movieList.jsp](/assets/img/project-img/movieList.jpg)
+![movieListCode](/assets/img/project-img/code/movieListCode.png)
 
 ### 영화 정보
 
 movieList.jsp에서 선택한 영화의 정보를 자세한 정보를 DB에서 MovieController.java를 통해 가져와 movieDetail.jsp에서 출력해 주었습니다.   
-movieDetail.jsp(영화 정보)에서 jsp:include태그를 이용해 줄거리(movieSummary.jsp)와 관람평(movieReview.jsp)를 출력했습니다.
-- movieDetail.jsp   
+movieDetail.jsp(영화 정보)에서 jsp:include태그를 이용해 줄거리(movieSummary.jsp)와 관람평(movieReview.jsp)를 출력했습니다.   
 ![movieDetail.jsp](/assets/img/project-img/movieDetail.jpg)
+![movieDetailCode1](/assets/img/project-img/code/movieDetailCode.png)
 
 ### 영화정보(줄거리)
 
 더보기 버튼 클릭시 전체 줄거리 출력   
 JQuery와 CSS를 이용하여 더보기 버튼을 구현했습니다.   
-- movieSummary.jsp   
 ![movieSummary.jsp](/assets/img/project-img/movieSummary.jpg)
+![movieSummaryCode](/assets/img/project-img/code/movieSummaryCode.png)
 
 ### 영화정보(관람평)
 
 댓글 조회, 입력, 수정, 삭제기능 구현   
 각각의 기능은 ajax를 이용하여 값을 넘겨주고 REST API를 이용한 Controller에서 값을 처리해 movieReview.jsp에서 출력해 주었습니다.   
-- movieReview.jsp   
 ![movieReview.jsp](/assets/img/project-img/movieReview.jpg)
+![movieReviewCode1](/assets/img/project-img/code/movieReviewCode1.png)
+![movieReviewCode2](/assets/img/project-img/code/movieReviewCode2.png)
 
 ### 예매 정보 입력
 
-영화와 극장을 선택해야 예매가능 시간이 출력되도록 했습니다.   
-극장과 시간의 출력은 JQuery와 REST API를 이용하여 구현했습니다.   
-- movieTicketing.jsp   
+영화와 극장을 선택해야 예매 정보가 출력되도록 했습니다.   
+극장과 시간의 출력은 JQuery와 REST API를 이용하여 구현했습니다.    
 ![movieTicketing.jsp](/assets/img/project-img/movieTicketing.jpg)
+![movieTicketingCode1](/assets/img/project-img/code/movieTicketingCode1.png)
+![movieTicketingCode2](/assets/img/project-img/code/movieTicketingCode2.png)
 
 ### 좌석 선택
 
 좌석은 Controller에서 배열과 2중 for문을 이용하여 해당 극장의 좌석 수만큼 생성해 값을 넘겨주고, JSTL을 이용하여 seatReserve.jsp에서 출력해 주었습니다.   
-- seatReserve.jsp   
 ![seatReserve.jsp](/assets/img/project-img/seatReserve.jpg)
+![seatReserveCode](/assets/img/project-img/code/seatReserveCode.png)
 
 ### 결제
 
-결제는 아임포트 결제 API를 사용하여 구현하였습니다.
-- payment.jsp   
+결제는 아임포트 결제 API를 사용하여 구현하였습니다.   
 ![payment.jsp](/assets/img/project-img/payment.jpg)
 
 
-## 프로젝트를 진행하면서
+## 3. 프로젝트를 진행하면서
 
 ### 오류 정리
 

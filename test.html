@@ -1,0 +1,111 @@
+
+
+
+
+<div class="movie_list">
+    <c:forEach var="vo" items="${list }">
+        <div class="movie_item">
+            <div class="poster">
+                <a href="movieDetail?movieId=${vo.movieId}&section=movieSummary.jsp">
+                <img alt="${vo.movieName}" src="../resources/img/${vo.movieId}.jpg">
+                </a>
+            </div> <!-- end poster -->
+            <div class="infor">
+                <p><span class="age${vo.ageLimit}"></span> ${vo.movieName}</p>
+                <p>${vo.movieGenre}</p> 
+                <fmt:formatDate value="${vo.releaseDate}"
+                pattern="yyyy.MM.dd"
+                var="releaseDate"/>
+                <p class="long_char">누적 관객 ${vo.audCount}명 | 개봉일 ${releaseDate}</p>
+                <a href="#">예매</a>
+            </div> <!-- end infor -->
+        </div> <!-- end movie_item -->
+    </c:forEach>
+</div> <!-- end movie_list -->
+
+
+
+
+<section id="movie_detail_infor">
+    <div class="container">
+        <div class="title">
+            ${vo.movieName}
+            <p style="font-size: 25px; line-height: 0;">${vo.movieEngTitle}</p>
+        </div><!-- end title -->
+        <div class="post">
+            <img alt="${vo.movieName} 포스터" src="../resources/img/${vo.movieId}.jpg">
+            <br> <!-- 예매 -->
+            <a href="../reserve/movieTicketing?movieId=${vo.movieId}"><strong>예매</strong></a>
+        </div> <!-- end post -->
+        <div class= "detail_infor">
+            <!-- <div class="rating_avg">
+                <p>실관람 평점</p>
+                <h1>10.0</h1>
+            </div> -->
+            <div class="aud_count">
+                <p>누적관객수</p>
+                <h1>${vo.audCount}</h1>명
+            </div>
+        </div> <!-- end detail_infor -->
+    </div> <!-- end container -->
+</section> <!-- end section movie_detail_title -->
+
+<section id="movie_detail_content">
+    <div class="container1">
+        <div class="detail_cont">
+            <div class="detail_cont_nav">
+                <ul class="cont_nav_ul">
+                <li class="cont_nav_li" id="summary"><a href="movieDetail?movieId=${vo.movieId}&section=movieSummary.jsp">주요 정보</a></li><!-- 여백 없애기
+                 --><li class="cont_nav_li" id="review"><a href="movieDetail?movieId=${vo.movieId}&section=movieReview.jsp">관람평</a></li>
+                </ul>
+            </div>
+            <div class="detail_cont_section">
+                <jsp:include page="${param.section}"/>
+            </div> <!-- end detail_cont_section -->
+        </div> <!-- detail_cont -->
+    </div> <!-- end container1 -->
+</section> <!-- end section movie_detail_content -->
+
+<input type="button" class="more_btn" value="더보기">
+
+<script type="text/javascript">
+	$('.more_btn').click(function(){
+		if($('.more_btn').hasClass('extends')){
+			$('.summary_txt').removeClass('extends');
+			$(this).removeClass('extends');
+			$(this).val('더보기');
+		}else{
+			$('.summary_txt').addClass('extends');
+			$(this).addClass('extends');
+			$(this).val('닫기');
+		}
+	});// end more_btn.click()
+	</script>
+
+<div class="movie_review">
+    댓글이 총 ${reviewCount }개 있습니다. <br>
+    <p>
+    댓글 <input type="text" id="write_review"> 
+    <button id = "review_add_btn">관람평작성</button>
+    </p>
+    <c:forEach var="reviewVo" items="${reviewList }">
+        <div class="review_item">
+            <input type="hidden" id="reviewContent" value="${reviewVo.reviewContent}" />
+            <fmt:formatDate value="${reviewVo.reviewDate}"
+            pattern="yyyy.MM.dd"
+            var="releaseDate"/>
+            <p class = "reviewContent_${reviewVo.reviewId}">${reviewVo.reviewContent}</p>
+            <p class="review_infor">
+                ${reviewVo.userId} | ${releaseDate}
+                <input type="button" class="review_infor_btn" onclick="reviewUpdate('${reviewVo.reviewId}')" value="수정">
+                <input type="button" class="review_infor_btn" onclick="reviewDelete('${reviewVo.reviewId}')" value="삭제">
+            </p>
+            <div class="review_update_content_${reviewVo.reviewId}" style="display:none;">
+                <input type="text" class="update_content_${reviewVo.reviewId}">
+                <input type="button" class="review_update_btn" value="수정">
+            </div> <!-- end review_update_content_리뷰아이디 -->
+        </div> <!-- end review_item -->
+        <hr>
+    </c:forEach>
+</div> <!-- end movie_review -->
+

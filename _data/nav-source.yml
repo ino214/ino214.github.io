@@ -1,0 +1,8 @@
+- title: 영화 예매 사이트
+  navList:
+    - navItem: 1.개발환경
+      url: 1-개발환경
+    - navItem: 2.프로젝트소개
+      url: 2-프로젝트-소개
+    - navItem: 3.프로젝트를진행하면서
+      url: 3-프로젝트를-진행하면서
