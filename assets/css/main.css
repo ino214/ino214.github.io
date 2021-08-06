@@ -441,6 +441,10 @@ nav a{
 .highlight{
     background-color: #f8f8f8;
 }
+.kram-cont p img{
+    max-width: 100%;
+    height: auto;
+}
 
 @media(min-width: 400px){
     .container{
