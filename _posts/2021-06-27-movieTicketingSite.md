@@ -42,58 +42,107 @@ title: 영화 예매 사이트
 ## 2. 프로젝트 소개
 
 교육기관에서 팀프로젝트를 진행해 만든 프로젝트 입니다.   
-최근에 피아니스트, 오만과 편견, 멀홀랜드 드라이브 등 옛날 영화에 관심이 가 주제를 영화와 관련된 영화예매사이트로 정하였습니다.   
-총 인원은 2명으로 저는 영화 목록 출력, 영화 정보, 관람평, 예매와 좌석선택, 결제 기능을 맡았습니다.   
+저와 팀원분이 평소 영화에 관심이 많아 기획하게 된 영화 예매 사이트입니다.   
+> ***이미지에 마우스 오버 시 이미지가 확대 됩니다.**   
 
 ### 영화 목록 출력
 
-MovieController.java에서 데이터베이스에 있는 영화정보를 받아와 movieList.jsp에서 출력해 주었습니다.   
-(Controller -> Service -> DAO -> DB -> DAO -> Service -> Controller)   
-DB에 있는 모든 영화를 가져와 간단한 정보와 함께 출력해 주었습니다.   
-![movieList.jsp](/assets/img/project-img/movieList.jpg)
-![movieListCode](/assets/img/project-img/code/movieListCode.png)
+<div class="project-item">
+	<div class="project-img port-img">
+		<img src="/assets/img/project-img/movieList.png">
+	</div>
+	<div class="project-item-cont port-cont">
+		<p>
+			Mybatis를 통해 DB에 있는 영화 정보를 가져와 JSTL의 foreach문을 이용해 영화의 간단한 정보를 출력했습니다.<br><br>
+			날짜는 JSTL의 fmt태그를 사용하여 포맷했습니다.
+		</p>
+	</div>
+</div>
 
 ### 영화 정보
 
-movieList.jsp에서 선택한 영화의 정보를 자세한 정보를 DB에서 MovieController.java를 통해 가져와 movieDetail.jsp에서 출력해 주었습니다.   
-movieDetail.jsp(영화 정보)에서 jsp:include태그를 이용해 줄거리(movieSummary.jsp)와 관람평(movieReview.jsp)를 출력했습니다.   
-![movieDetail.jsp](/assets/img/project-img/movieDetail.jpg)
-![movieDetailCode1](/assets/img/project-img/code/movieDetailCode.png)
+<div class="project-item">
+	<div class="project-img port-img">
+		<img src="/assets/img/project-img/movieDetail.png">
+	</div>
+	<div class="project-item-cont port-cont">
+		<p>
+			DB에서 선택된 영화의 정보를 가져와 출력했습니다.<br><br>
+			jsp:include태그를 이용해 주요 정보(줄거리)와 관람평을 출력할 수 있도록 구현했습니다.
+		</p>
+	</div>
+</div> 
 
 ### 영화정보(줄거리)
 
-더보기 버튼 클릭시 전체 줄거리 출력   
-JQuery와 CSS를 이용하여 더보기 버튼을 구현했습니다.   
-![movieSummary.jsp](/assets/img/project-img/movieSummary.jpg)
-![movieSummaryCode](/assets/img/project-img/code/movieSummaryCode.png)
+<div class="project-item">
+	<div class="project-img port-img">
+		<img src="/assets/img/project-img/movieSummary.png">
+	</div>
+	<div class="project-item-cont port-cont">
+		<p>
+			앞서 가져온 해당 영화 정보의 줄거리를 불러와 출력했습니다.<br><br>
+			JQuery와 CSS를 사용하여 주요 정보 페이지에 더보기 버튼을 클릭할 시 전체 줄거리가 출력 되도록 구현했습니다.
+		</p>
+	</div>
+</div>
 
 ### 영화정보(관람평)
 
-댓글 조회, 입력, 수정, 삭제기능 구현   
-각각의 기능은 ajax를 이용하여 값을 넘겨주고 REST API를 이용한 Controller에서 값을 처리해 movieReview.jsp에서 출력해 주었습니다.   
-![movieReview.jsp](/assets/img/project-img/movieReview.jpg)
-![movieReviewCode1](/assets/img/project-img/code/movieReviewCode1.png)
-![movieReviewCode2](/assets/img/project-img/code/movieReviewCode2.png)
+<div class="project-item">
+	<div class="project-img port-img">
+		<img src="/assets/img/project-img/movieReview.png">
+	</div>
+	<div class="project-item-cont port-cont">
+		<p>
+			관람자의 관람평을 볼 수 있는 페이지로 댓글 조회, 입력, 수정, 삭제 기능을 구현했습니다.<br><br>
+			각각의 기능은 ajax를 이용하여 값을 넘겨주고 REST API를 이용해 구현했습니다.
+		</p>
+	</div>
+</div>
 
 ### 예매 정보 입력
 
-영화와 극장을 선택해야 예매 정보가 출력되도록 했습니다.   
-극장과 시간의 출력은 JQuery와 REST API를 이용하여 구현했습니다.    
-![movieTicketing.jsp](/assets/img/project-img/movieTicketing.jpg)
-![movieTicketingCode1](/assets/img/project-img/code/movieTicketingCode1.png)
-![movieTicketingCode2](/assets/img/project-img/code/movieTicketingCode2.png)
+<div class="project-item">
+	<div class="project-img port-img">
+		<img src="/assets/img/project-img/movieTicketing.png">
+	</div>
+	<div class="project-item-cont port-cont">
+		<p>
+			사용자가 이용할 예매 정보를 입력하는 페이지로 영화와 극장을 선택해야 예매 정보가 출력되도록 구현했습니다.<br><br>
+			극장과 시간의 출력은 JQuery의 getJSON과 REST API를 사용하여 구현했습니다.
+		</p>
+	</div>
+</div>
 
 ### 좌석 선택
 
-좌석은 Controller에서 배열과 2중 for문을 이용하여 해당 극장의 좌석 수만큼 생성해 값을 넘겨주고, JSTL을 이용하여 seatReserve.jsp에서 출력해 주었습니다.   
-![seatReserve.jsp](/assets/img/project-img/seatReserve.jpg)
-![seatReserveCode](/assets/img/project-img/code/seatReserveCode.png)
+<div class="project-item">
+	<div class="project-img port-img">
+		<img src="/assets/img/project-img/seatReserve.png">
+	</div>
+	<div class="project-item-cont port-cont">
+		<p>
+			좌석 출력은 배열과 2중 for문을 사용하여 해당 극장의 좌석 수만큼 생성해 출력했습니다.<br><br>
+			좌석을 생성하면서 이미 예약된 좌석은 선택할 수 없도록 구현했습니다.<br><br>
+			관람인원 수만큼 좌석을 선택하지 않으면 다음 버튼이 비활성화 되도록 구현했습니다.<br><br>
+			만약 좌석 수보다 적은 관람인원을 선택시 값이 변경되지 않도록 구현했습니다.<br><br>
+		</p>
+	</div>
+</div>
 
 ### 결제
-
-결제는 아임포트 결제 API를 사용하여 구현하였습니다.   
-![payment.jsp](/assets/img/project-img/payment.jpg)
-
+<div class="project-item">
+	<div class="project-img port-img">
+		<img src="/assets/img/project-img/payment.png">
+	</div>
+	<div class="project-item-cont port-cont">
+		<p>
+			결제 기능은 아임포트의 이니시스 결제 API를 사용하여 구현했습니다.
+		</p>
+	</div>
+</div>
+ 
 
 ## 3. 프로젝트를 진행하면서
 
